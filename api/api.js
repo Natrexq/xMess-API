@@ -1,41 +1,82 @@
-const ApigetCallElement = (where, from, type, title, message, color) => {
+const ApigetCallElement = (where, from, type, title, message) => {
 
 
-    let box = document.createElement("div");
-    let contentbox = document.createElement("div");
-    let contenttop = document.createElement("div");
-    let texttitle = document.createElement("h4");
-    let text = document.createElement("h5");
-    let exitbut = document.createElement("button");
+    let notifi = document.createElement("div");
+    let not_logo = document.createElement("div");
 
-    box.classList.add("notification-box");
-    box.classList.add("from-right");
+    let not_content = document.createElement("div");
+    let not_tit = document.createElement("div");
+    let not_mess = document.createElement("div");
+    let logo = document.createElement("div");
 
-    contentbox.classList.add("notification-box-content");
-    contenttop.classList.add("notification-box-top");
-    texttitle.textContent = title;
-    text.textContent = message;
-    exitbut.classList.add("exit")
-    exitbut.textContent = "X";
 
-    contenttop.appendChild(exitbut);
-    contenttop.appendChild(texttitle);
-    contentbox.appendChild(text);
-    box.appendChild(contenttop);
-    box.appendChild(contentbox);
-    where.appendChild(box);
+    let text_mess = document.createElement("h3");
+    let text_tit = document.createElement("h2");
+    let not_exit = document.createElement("button");
 
-    setTimeout(() => {
 
-        box.classList.remove("from-right")
-        box.classList.add("to-right")
-    }, 1000)
-    exitbut.addEventListener("click", function () {
+
+    let IsDisplaying = document.getElementById("jsbox");
+
+
+
+    if (IsDisplaying !== null) {
+        /** Notification is currently on screen */
+    }
+    else {
+        notifi.classList.add("notifi");
+        notifi.classList.add(from);
+        notifi.setAttribute("id", "jsbox");
+
+        where.appendChild(notifi);
+
+        not_logo.classList.add("notifi-logo")
+        logo.classList.add(type);
+        not_logo.appendChild(logo);
+
+        notifi.appendChild(not_logo);
+        not_exit.classList.add("notifi-exit")
+        not_exit.textContent = "X";
+
+        notifi.appendChild(not_exit);
+
+        not_content.classList.add("notifi-content")
+
+        notifi.appendChild(not_content);
+
+        //
+        not_tit.classList.add("notifi-title");
+        text_tit.textContent = title;
+        not_tit.appendChild(text_tit);
+
+
+        not_content.appendChild(not_tit);
+
+        not_mess.classList.add("notifi-mess");
+        text_mess.textContent = message;
+        not_mess.appendChild(text_mess);
+
+        not_content.appendChild(not_mess);
+
+
         setTimeout(() => {
-            box.classList.remove("to-right")
-            box.classList.add("from-right")
-        }, 200)
-    })
+            notifi.classList.add("to-center");
+            notifi.classList.remove(from);
+        }, 1000)
+        not_exit.addEventListener("click", function () {
+            setTimeout(() => {
+                notifi.classList.remove("to-center");
+                notifi.classList.add(from);
+
+                setTimeout(() => {
+                    logo.classList.remove(type);
+                    where.removeChild(notifi);
+                }, 300)
+            }, 200)
+        })
+    }
+
+
 
 }
 
