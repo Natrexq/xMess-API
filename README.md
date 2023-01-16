@@ -36,5 +36,5 @@
     </ul>
      </li>
       <h3 align="center">3.CopyRight:</h3>
-      <h5>All icons are from https://www.flaticon.com/ site</h5>
+      <h5 align="center">All icons are from https://www.flaticon.com/ site</h5>
     
