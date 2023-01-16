@@ -17,7 +17,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    filter: drop-shadow(0px 0px 5px #d6d4d4);
+    filter: drop-shadow(0px 0px 2.5px #d6d4d4);
     margin: 2vh;
 }
 
@@ -123,6 +123,7 @@
 .default {
     translate: 0px;
     position: fixed;
+    transform: translateY(0px);
 
 }
 
@@ -134,10 +135,24 @@
 }
 
 .from-left {
-    translate: -1200px;
+    translate: -2200px;
     position: fixed;
     transition: all 500ms;
 
+}
+
+.from-bottom {
+
+    position: fixed;
+    transition: all 500ms;
+    transform: translateY(1200px);
+}
+
+.from-top {
+
+    position: fixed;
+    transition: all 500ms;
+    transform: translateY(-1200px);
 }
 
 
@@ -146,4 +161,5 @@
     translate: 0px;
     position: fixed;
     transition: all 500ms;
+
 }

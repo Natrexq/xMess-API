@@ -1,4 +1,4 @@
-const ApigetCallElement = (where, from, type, title, message) => {
+const xMassCall = (where, from, type, title, message) => {
 
 
     let notifi = document.createElement("div");
