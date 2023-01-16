@@ -31,7 +31,10 @@
    <li>F5:  Notification message: "message of notification";</li>
     <br/>
   <li>Example usage: xMassCall(body, "from-top", "warn", "Warning", "You can't do it");</li>
+    <br/>
+<img src="https://raw.githubusercontent.com/Natrexq/xMess-API-/description/work.png"/>
     </ul>
-
-   <h2>a</h2>
+    
+      <h3 align="center">3.CopyRight:</h3>
+      <h5>All icons are from https://www.flaticon.com/ site</h5>
     
