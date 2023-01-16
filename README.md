@@ -33,8 +33,5 @@
   <li>Example usage: xMassCall(body, "from-top", "warn", "Warning", "You can't do it");</li>
     </ul>
 
-    <img align="center" src="https://raw.githubusercontent.com/Natrexq/xMess-API-/description/work.png"/>
-    
-      <h3 align="center">3.CopyRight:</h3>
-      <h5>All icons are from https://www.flaticon.com/ site</h5>
+   <h2>a</h2>
     
